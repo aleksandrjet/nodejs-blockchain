@@ -50,3 +50,5 @@ export const averageWork = () => {
     // console.groupEnd()
   }
 }
+
+averageWork()
