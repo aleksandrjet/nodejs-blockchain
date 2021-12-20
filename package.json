@@ -7,10 +7,11 @@
     "prettier": "pretty-quick --staged --pattern \"src/**/*.*(js|jsx|ts|tsx)\"",
     "eslint": "eslint --max-warnings=0 .",
     "tslint": "tsc --noEmit",
+    "average-work": "ts-node \"./src/averageWork.ts\"",
     "start": "ts-node \"./src/index.ts\"",
-    "start-js": "node \"./lib/index.js\"",
-    "start-dev-js": "nodemon \"./lib/index.js\"",
-    "average-work": "ts-node \"./src/averageWork.ts\""
+    "build": "rm -rf lib && tsc",
+    "start-js": "npm run build && node \"./lib/index.js\"",
+    "start-dev-js": "npm run build && nodemon \"./lib/index.js\""
   },
   "keywords": [],
   "author": "",
@@ -23,7 +24,9 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
+    "@types/body-parser": "^1.19.2",
     "@types/lodash": "^4.14.177",
+    "body-parser": "^1.19.1",
     "crypto": "^1.0.1",
     "express": "^4.17.1",
     "hex-to-binary": "^1.0.1",

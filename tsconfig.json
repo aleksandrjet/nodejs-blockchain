@@ -17,7 +17,7 @@
     "noImplicitAny": false,
     "strictNullChecks": true,
     "downlevelIteration": true,
-    "declaration": true,
+    "declaration": false,
     "types": ["node"]
   },
   "include": ["src"]
