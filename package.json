@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier": "pretty-quick --staged --pattern \"src/**/*.*(js|jsx|ts|tsx)\"",
+    "eslint": "eslint --max-warnings=0 .",
+    "tslint": "tsc --noEmit",
     "start": "ts-node \"./src/index.ts\"",
+    "start-js": "node \"./lib/index.js\"",
+    "start-dev-js": "nodemon \"./lib/index.js\"",
     "average-work": "ts-node \"./src/averageWork.ts\""
   },
   "keywords": [],
